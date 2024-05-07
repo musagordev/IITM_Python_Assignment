@@ -1,0 +1,42 @@
+D = dict()
+for item in scores:
+  if item[1] in D:
+    D[item[1]].append(item[0])
+  else:
+    D[item[1]] = [item[0]]
+
+marks = list(D.keys())
+print(marks)
+print(D)
+for i in range(0, len(marks)):
+  for j in range(i + 1, len(marks)):
+    if marks[i] >= marks[j]:
+      marks[i], marks[j] = marks[j], marks[i]
+
+print(marks)
+print(D)
+for i in range(len(D)):
+  for j in range(len(D[marks[i]])):
+    if D[marks[i]][i] >= D[marks[i]][j]:
+      D[marks[i]][i], D[marks[i]][j] = D[marks[i]][j], D[marks[i]][i]
+
+print(marks)
+print(D)
+final = []
+for i in range(len(D)):
+  for j in D[marks[i]]:
+    final.append((j, marks[i]))
+print(final)
+
+def two_level_sort(scores):
+  sorted_L = [ ]
+  while scores != [ ]:
+    minentry = scores[0]
+    for i in range(len(scores)):             
+      if scores[i][1] < minentry[1]:
+        minentry = scores[i]            
+      elif (scores[i][1] == minentry[1] and scores[i][0] < minentry[0]):
+        minentry = scores[i]         
+        sorted_L.append(minentry)         
+        scores.remove(minentry) 
+  return sorted_L"""
