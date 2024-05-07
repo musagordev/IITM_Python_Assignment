@@ -1,0 +1,65 @@
+def is_magic(mat):
+  """
+  determine if a matrix is magic square
+
+  Paramters:
+      mat: list of lists
+  Return:
+      string: 'YES' or 'NO'
+  """
+"""
+  def sum_of_rows(mat):
+      sum = 0
+      for i in range(len(mat)):
+          row = mat[i]
+          sum_row = 0
+          for j in row:
+              sum_row = sum_row + j
+          if sum == 0:
+              sum = sum_row
+          else:
+              if sum != sum_row:
+                  return False
+      return sum
+
+  def sum_of_cols(mat):
+      sum = 0
+      for i in range(len(mat)):
+          sum_col = 0
+          for k in range(len(mat)):
+              cols = mat[k][i]
+              sum_col = sum_col + cols
+          if sum == 0:
+              sum = sum_col
+          else:
+              if sum != sum_col:
+                  return False
+      return sum
+
+  def sum_of_diag(mat):
+      sum_diag_1 = 0
+      sum_diag_2 = 0
+      for i in range(len(mat)):
+          for k in range(len(mat)):
+              if i != k and i+k != (len(mat)-1):
+                  continue
+              else:
+                  if i == k:
+                      sum_diag_1 = sum_diag_1 + mat[i][k]
+                  elif i+k == len(mat)-1:
+                      sum_diag_2 = sum_diag_2 + mat[i][k]
+      if sum_diag_2 != sum_diag_1:
+          return False
+      elif sum_diag_1 == sum_diag_2:
+          return sum_diag_1
+
+  res = ''
+  if sum_of_rows(mat) == False or sum_of_cols(mat) == False or sum_of_diag(mat) == False:
+      res = 'NO'
+      return res
+  elif sum_of_rows(mat) == sum_of_cols(mat) and sum_of_rows(mat) == sum_of_diag(mat) and sum_of_cols(mat) == sum_of_diag(mat):
+      res = 'YES'
+      return res
+  else:
+      res = 'NO'
+      return res"""
