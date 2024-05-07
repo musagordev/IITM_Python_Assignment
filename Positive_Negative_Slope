@@ -1,0 +1,22 @@
+
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+
+if x2 == x1:
+    y3 = 0
+else:
+    y3 = ((x3-x1)*(y2-y1)/(x2-x1))+y1
+
+if y3 == 0:
+    print('Vertical Line')
+else:
+    print(y3)
+    if (y2-y1)/(x2-x1) > 0:
+        print('Positive Slope')
+    elif (y2-y1)/(x2-x1) < 0:
+        print ('Negative Slope')
+    elif (y2-y1)/(x2-x1) == 0:
+        print('Horizontal Line')"""
