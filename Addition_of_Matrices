@@ -1,0 +1,27 @@
+Addition of Matrice
+dim = int(input())
+
+Matrix_1 = []
+
+for i in range(dim):
+    row_str = input()
+    row_lst = row_str.split(',')
+    Matrix_1.append(row_lst)
+
+Matrix_2 = []
+
+for i in range(dim):
+    row_str = input()
+    row_lst = row_str.split(',')
+    Matrix_2.append(row_lst)
+
+L=[]
+for i in range(dim):
+    row2 = []
+    for j in range(dim):
+        row2.append(str(int(Matrix_1[i][j])+int(Matrix_2[i][j])))
+    L.append(row2)
+
+for row in L:
+    new_row = ','.join(row)
+    print(new_row)"""
