@@ -1,0 +1,30 @@
+#def matrix_type(M):
+#
+"""
+    Determine the type of the matrix.
+  
+    Parameters:
+        M: list of lists
+    Return:
+        mtype: str
+    """
+
+#
+"""
+    row = len(M)
+    diag = []
+    for i in range(row):
+        for j in range(row):
+            if i == j:
+                diag.append(M[i][j])
+            else:
+                if M[i][j] != 0:
+                    return 'non-diagonal'
+    for num in diag:
+        for num2 in diag:
+            if num != num2:
+                return 'diagonal'
+            elif num == num2 == 1:
+                return 'identity'
+            elif num == num2:
+                return 'scalar'
