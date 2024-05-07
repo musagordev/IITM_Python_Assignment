@@ -1,0 +1,27 @@
+Finding Nearest Point on X,Y plane
+
+seq_num = int(input())
+
+point_list = []
+for i in range(seq_num):
+  point = input()
+  L = point.split(',')
+  point_list.append(L)
+
+P = input()
+P_list = P.split(',')
+min = 1000
+nearest = []
+for i in range(seq_num):
+  point_min = ((int(P_list[0]) - int(point_list[i][0]))**2 +
+               (int(P_list[1]) - int(point_list[i][1]))**2)**0.5
+  if point_min < min:
+    min = point_min
+    nearest = []
+    nearest.append(point_list[i])
+  elif min == point_min:
+    nearest.append(point_list[i])
+
+for row in nearest:
+  new_row = ','.join(row)
+  print(new_row)
