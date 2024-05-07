@@ -1,0 +1,35 @@
+Produce of Matrices
+
+dim = int(input())
+
+Matrix_1 = []
+Matrix_2 = []
+Matrix_Product = []
+
+#Create Matrix_1
+for i in range(dim):
+    row = input()
+    row_list = row.split(',')
+    Matrix_1.append(row_list)
+
+#Create Matrix_2
+for i in range(dim):
+    row = input()
+    row_list = row.split(',')
+    Matrix_2.append(row_list)
+
+#Product Matrices
+for i in range(dim):
+    row = []
+    for j in range(dim):
+        product = 0
+        for k in range(dim):
+            product = product + int(Matrix_1[i][k])*int(Matrix_2[k][j])
+        row.append(str(product))
+    Matrix_Product.append(row)
+    
+#Printing Matrix_Product
+
+for row in Matrix_Product:
+    new_row = ','.join(row)
+    print(new_row)"""
