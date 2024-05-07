@@ -1,0 +1,19 @@
+Multiply a matrix
+
+dim = int(input())
+
+matrix = []
+for i in range(dim):
+    row_str = input()
+    row_lst = row_str.split(' ')
+    matrix.append(row_lst)
+
+multiply = int(input())
+
+for i in range(len(matrix)):
+    for j in range(len(matrix)):
+        matrix[i][j] = str(multiply * int(matrix[i][j]))
+
+for row in matrix:
+    new_row = ' '.join(row)
+    print(new_row)
