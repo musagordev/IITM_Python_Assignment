@@ -1,0 +1,17 @@
+List comprehension
+
+def factors(num):
+  L=[number for number in range(1,num+1) if num%number==0]
+  return L
+"""
+"""
+IF inline statement
+small = a if a < b else b
+"""
+"""
+Sorting dict by values and returning list of tuples
+def sort_dict(d):
+    new_L=[(k,v) for k,v in d.items()]
+    new_L = sorted(new_L, key=lambda x:x[1])
+    return new_L
+"""
